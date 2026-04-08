@@ -41,6 +41,8 @@ Website: [1102tools.com](https://1102tools.com)
 | [IGCE Builder: Cost-Reimbursement](skills/igce-builder-cr) | v1.1 | No key* | CPFF, CPAF, CPIF IGCEs with fee structure analysis and statutory fee caps. |
 | [Market Research Builder](skills/market-research-builder) | v1.3 | No key* | FAR Part 10 market research report from USASpending data. |
 | [Grants Builder](skills/grants-builder) | v1.0 | No key* | Federal grant budgets aligned to 2 CFR 200 / SF-424A. |
+| [Vendor Intelligence](skills/vendor-intelligence) | v1.0 | No key* | Pre-award vendor due diligence: entity profiles, exclusion checks, award history, FAR 9.104-1 mapping, 12 risk flags. |
+| [Vendor Intelligence Reference](skills/vendor-intelligence-reference) | v1.0 | No key | FAR 9 responsibility guide, risk flag definitions, business type codes. Install alongside main skill. |
 
 *Uses keys from other installed skills. No additional key needed.
 
