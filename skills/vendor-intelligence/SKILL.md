@@ -17,7 +17,7 @@ description: >
 
 | Version | Date | Change |
 |---------|------|--------|
-| 1.0 | Apr 2026 | Initial release: full pre-award due diligence with 12 risk flags, FAR 9.104-1 mapping, award history |
+| 1.0 | Apr 2026 | Initial release: full pre-award due diligence with 11 risk flags, FAR 9.104-1 mapping, award history |
 
 ## Overview
 
