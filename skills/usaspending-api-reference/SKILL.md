@@ -14,7 +14,7 @@ Supplemental reference for the USASpending API skill. Load on demand when you ne
 4. Loan Search
 5. Award Funding (File C)
 6. Reference Endpoints
-7. PSC Code Reference (Common FDA Codes)
+7. PSC Code Reference (Common IT/Services Codes)
 8. Vendor Deduplication Notes
 9. Troubleshooting
 
@@ -250,7 +250,7 @@ Sort fields: reporting_fiscal_date, account_title, transaction_obligated_amount,
 
 ---
 
-## 7. PSC Code Reference (Common FDA Codes)
+## 7. PSC Code Reference (Common IT/Services Codes)
 
 | Code | Description |
 |------|-------------|
@@ -290,4 +290,5 @@ The `recipient` category returns results by unique entity (UEI). Large companies
 | Empty results for known PIID | Wrong award type group | Try contracts then IDVs |
 | Null values for valid fields | Typo in field name (API accepts anything) | Verify field spelling |
 | Truncated description | FPDS 4000-char limit | Normal; use what's available |
-| Stale data | FPDS nightly updates | Typically 1 business day behind |
+| Stale data (non-DoD) | FPDS update lag | Non-DoD typically available within 5 business days |
+| Stale data (DoD/USACE) | 90-day FPDS reporting delay | DoD and USACE procurement data has a 90-day lag; plan accordingly |

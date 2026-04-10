@@ -19,7 +19,11 @@ description: >
 
 # IGCE Builder: Firm-Fixed-Price (FFP)
 
-**Version 1.0** | March 2026
+**Version 1.1** | April 2026
+
+### Changelog
+- **v1.1** (April 2026): Added Step 2B — BLS wage aging factor. Wages are now aged forward from BLS data vintage (May 2024) to contract start date using the escalation rate, closing the ~2-year data lag gap that was understating base year costs.
+- **v1.0** (March 2026): Initial release.
 
 ## Overview
 
@@ -175,12 +179,30 @@ Use metro-level prefix (OEUM) when available. Fall back to state (OEUS), then na
 
 If BLS returns "-" with footnote code 5, the wage exceeds the $239,200 cap. Use the cap as a lower bound and flag in the narrative.
 
+### Step 2B: Age BLS Wages to Contract Start Date
+
+BLS OEWS data has a ~2-year lag (May 2024 estimates released April 2025). If the contract Period of Performance starts after the data reference period, the base wages must be aged forward to avoid understating costs.
+
+```
+months_gap = months between BLS data vintage (May 2024) and contract PoP start date
+aging_factor = (1 + escalation_rate) ^ (months_gap / 12)
+aged_annual_wage = annual_median * aging_factor
+```
+
+Example: BLS data from May 2024, contract starts October 2026 = 29 months gap. At 2.5% escalation: aging_factor = 1.025^(29/12) = ~1.061. A $100,000 BLS median becomes $106,100 before wrap rate buildup.
+
+Use the aged wage as the basis for all subsequent calculations. Document the aging adjustment in the Methodology sheet: "BLS OEWS May 2024 wages aged forward [X] months to [contract start] at [escalation rate]%/yr to account for data lag."
+
+If the user does not provide a contract start date, ask for one. If unknown, default to 6 months from today and note the assumption.
+
+The escalation applied in Step 7 across option years starts AFTER this aging adjustment. Step 2B ages the base wage to the contract start; Step 7 escalates from that adjusted base across the period of performance. These are not double-counted.
+
 ### Step 3: FFP Wrap Rate Buildup
 
 Build the fully burdened rate layer by layer for each labor category:
 
 ```
-1. Direct Labor Rate    = annual_median / 2080
+1. Direct Labor Rate    = aged_annual_wage / 2080
 2. Fringe               = Direct Labor * fringe_rate
 3. Labor + Fringe       = Direct Labor + Fringe
 4. Overhead             = Labor_Fringe * overhead_rate
@@ -406,13 +428,13 @@ Claude will: map to SOC codes, pull DC BLS wages, build layered wrap rates at lo
 **SOW-driven:** "Here's my PWS, I need an FFP cost estimate" [user uploads PWS]
 Claude will: run Step 0 decomposition, validate with user, then full Workflow A with FFP buildup.
 
-**With travel:** "FFP IGCE for 5-person IT team in DC, monthly travel to San Antonio, base plus 4 OYs"
+**With travel:** "FFP IGCE for 5-person IT team in DC, monthly travel to Seattle, base plus 4 OYs"
 Claude will: ask for labor breakdown, run Steps 1-8 including City Pair lookup for DCA-SAT.
 
 **Rate validation:** "Vendor proposes $185/hr for a Software Dev, FFP contract. Reasonable?"
 Claude will: Workflow B. Pull CALC+ distribution, run BLS wrap rate buildup for context, position $185 within both, produce validation summary.
 
-**Multi-location:** "FFP IGCE for 10-person help desk split between San Antonio and Houston, quarterly travel to DC"
+**Multi-location:** "FFP IGCE for 10-person help desk split between Baltimore and Philadelphia, quarterly travel to DC"
 Claude will: ask which multi-location approach, pull BLS for both metros, calculate travel for DC, produce combined workbook with scenario analysis.
 
 **Custom rates:** "Use 35% fringe, 95% overhead, 15% G&A, 12% profit for a cleared environment"
