@@ -217,3 +217,8 @@ Append `&export=y` to any query URL. CSV includes metadata header rows before ac
 ## Additional Resources
 
 For complete aggregation schemas, composite workflows (IGCE benchmarking, price reasonableness check, vendor rate card extraction, multi-category IGCE builder, SIN analysis), common SINs table, pagination helper, and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

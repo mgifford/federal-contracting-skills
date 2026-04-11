@@ -282,3 +282,8 @@ filters = {
 ## Additional Resources
 
 For filter value tables (contract_pricing_type_codes, extent_competed_type_codes, set_aside_type_codes), composite workflows (enrich descriptions, batch lookup, award lifecycle), bulk download, loan search, reference endpoints, PSC codes, and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

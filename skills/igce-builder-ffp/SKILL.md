@@ -439,3 +439,8 @@ Claude will: ask which multi-location approach, pull BLS for both metros, calcul
 
 **Custom rates:** "Use 35% fringe, 95% overhead, 15% G&A, 12% profit for a cleared environment"
 Claude will: apply custom rates as mid scenario, set low = mid minus offset, high = mid plus offset, note cleared environment justification in methodology.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

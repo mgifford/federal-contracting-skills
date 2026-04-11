@@ -281,3 +281,8 @@ For DFARS: same pattern, sections use 2xx numbering (e.g., 252.227-7014).
 ## Additional Resources
 
 For response schemas, composite workflows (compare versions, list sections, find recent changes, search definitions), the full Title 48 chapter map, common FAR section reference, and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

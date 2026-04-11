@@ -302,3 +302,8 @@ def get_far_definition(term, date=None):
 4. **Cross-reference with Federal Register:** `<CITA>` elements contain FR citations (e.g., `[88 FR 53764]`). Use those with the Federal Register skill.
 5. **Alternate references:** Title 48 `hierarchy_metadata` includes `alternate_reference` (e.g., "FAR 15.305").
 6. **DFARS and supplements:** All agency FAR supplements are in Title 48; use chapter parameter to scope queries.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

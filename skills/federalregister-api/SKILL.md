@@ -231,3 +231,8 @@ def get_agencies():
 ## Additional Resources
 
 For composite workflows (open comment periods, FAR case history, CFR part tracking, agency regulatory summary, multi-agency scan, pre-pub watch, regulatory timeline), full requestable field reference, response schema, agency slug table, docket ID patterns, and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

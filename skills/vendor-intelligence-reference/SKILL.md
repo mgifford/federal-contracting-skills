@@ -303,3 +303,8 @@ officer retains sole authority for responsibility decisions per FAR 9.103.
 | Entity start date is very old (1800s) | SAM data quality issue. Some legacy registrations have incorrect dates. | Ignore flag if entity is clearly established. Check incorporation records if concerned. |
 | CONCENTRATION_RISK fires on a small business | Small vendors often start with one agency customer. Normal growth pattern. | Less concerning for small businesses. More relevant for large established contractors. |
 | Multiple vendors to check | Skill runs one vendor at a time. Each run uses 5-10 SAM API calls. | Space runs 1-2 minutes apart to respect rate limits. Federal system accounts get 10K calls/day. |
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

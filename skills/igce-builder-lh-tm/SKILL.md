@@ -445,3 +445,8 @@ Claude will: prorate base to 6 months (940 hrs), full hours for OY1-4, note pror
 
 **Cleared environment:** "Use 2.4x burden for a cleared IT support contract in DC"
 Claude will: set mid=2.4x, low=2.2x, high=2.6x, note cleared justification in methodology.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

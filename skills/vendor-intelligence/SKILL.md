@@ -288,3 +288,8 @@ See the `vendor-intelligence-reference` skill for detailed flag definitions, thr
 ## Rate Limit Awareness
 
 This workflow makes 5-10 SAM.gov API calls per vendor (entity, exclusions, awards, address check, CAGE check). The SAM.gov daily budget is shared across all SAM.gov skill usage. A single vendor intel run uses roughly the same budget as 5-10 individual SAM.gov lookups. Plan accordingly if running multiple vendors in sequence.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

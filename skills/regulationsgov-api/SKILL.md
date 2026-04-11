@@ -242,3 +242,8 @@ Returns: `title`, `docketType`, `agencyId`, `rin` (links to Unified Agenda), `dk
 ## Additional Resources
 
 For composite workflows (open comment tracker, FAR case history, comment analysis, regulatory change monitor, multi-agency docket search), response schemas, cursor-based pagination, document ID format guide, FAR case docket IDs, and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

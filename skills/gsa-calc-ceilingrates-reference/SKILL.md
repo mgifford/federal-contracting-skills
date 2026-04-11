@@ -225,3 +225,8 @@ def paginate_all(keyword, filters=None, page_size=500):
 | Suggest-contains returns empty | 1-char search term | Minimum 2 characters |
 | Stats seem wrong | Outliers skewing averages | Use `exclude` parameter or rely on median/percentiles |
 | CSV starts with junk rows | Metadata header before data | Skip to line starting with "Contract #," |
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

@@ -490,3 +490,8 @@ Claude will: run Step 0 decomposition, validate, confirm CPFF, then full workflo
 
 **Rate validation:** "Contractor proposes $195/hr on a CPFF contract. Reasonable?"
 Claude will: Workflow B. Pull CALC+, run BLS cost pool buildup, position $195, produce validation.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

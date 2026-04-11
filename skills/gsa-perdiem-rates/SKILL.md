@@ -212,3 +212,8 @@ def get_best_rate(response, query_city=None):
 ## Additional Resources
 
 For recipes (single lookup with M&IE breakdown, travel cost estimation, multi-location comparison, year-over-year trends, travel IGCE builder, ZIP lookup), common FY2026 rates table, IGCE travel formula, response schemas, and error handling: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

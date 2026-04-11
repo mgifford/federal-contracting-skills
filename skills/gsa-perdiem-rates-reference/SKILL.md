@@ -245,3 +245,8 @@ Per diem covers lodging + M&IE only. Also estimate: airfare (GSA City Pairs at c
 | Best for | IGCE automation, Claude skills | One-off lookups |
 
 Cross-validate at https://www.gsa.gov/travel/plan-book/per-diem-rates.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

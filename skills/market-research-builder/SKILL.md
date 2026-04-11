@@ -597,3 +597,8 @@ Note in the methodology section:
 - **Subcontract data**: limited in USASpending; prime award analysis only.
 - **Price analysis**: this skill produces market research, not pricing analysis. For pricing, use the IGCE Builder skill.
 - **Award count trends over time**: the spending_over_time endpoint returns dollars only, not counts per year.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

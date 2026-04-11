@@ -517,3 +517,8 @@ sam_psc("engineering")
 ## Additional Resources
 
 For entity section schemas (full field reference), exclusion response fields, contract awards response schema, opportunity set-aside codes, business type codes, composite workflows (vendor responsibility check, market research entity scan, opportunity monitoring, contract award history lookup, vendor award profile), and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

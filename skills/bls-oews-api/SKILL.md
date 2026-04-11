@@ -233,3 +233,8 @@ def detect_oews_year(api_key=None):
 ## Additional Resources
 
 For query recipes (wage profile, metro comparison, multi-occupation, industry-specific, IGCE rate derivation), BLS vs CALC+ comparison table, full SOC code lookup table, complete IGCE workflow example, and error handling: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

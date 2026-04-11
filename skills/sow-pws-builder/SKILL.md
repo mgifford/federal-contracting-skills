@@ -290,3 +290,8 @@ Include columns for: labor category, SOC code, FTE count, active phases, product
 - **Full QASP** — this skill includes a QASP summary table; a detailed QASP with surveillance schedules is a separate deliverable
 - **Clause selection (Section I/L)** — requires contracting officer determination per FAR Parts 12, 15, 16, 52
 - **Contract type determination** — this skill accepts the user's contract type decision; it does not advise on which type to select (that's a FAR 16 analysis)
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

@@ -544,3 +544,8 @@ Claude will: use 10% de minimis rate per 2 CFR 200.414(f). Note the de minimis e
 
 **NIH with salary cap:** "PI salary is $280,000 but this is NIH-funded"
 Claude will: verify current NIH salary cap via web search, apply the cap to the PI's effort-based salary calculation, note the difference in the personnel detail sheet, and explain the cap in the budget justification narrative.
+
+
+---
+
+*MIT © 2026 James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*
