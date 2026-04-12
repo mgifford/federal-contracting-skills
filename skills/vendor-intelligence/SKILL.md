@@ -1,28 +1,27 @@
 ---
 name: vendor-intelligence
 description: >
-  Pre-award vendor due diligence combining SAM.gov, USASpending, and eCFR into
+  Pre-award vendor due diligence combining SAM.gov and USASpending into
   a single responsibility determination workflow. Produces entity profiles,
   exclusion checks, award history, FAR 9.104-1 factor mapping, and risk flags.
   Trigger on: vendor intelligence, vendor due diligence, responsibility
   determination, pre-award check, vendor risk, vendor background, vendor
   profile, is this vendor responsible, can I award to this vendor, check this
   contractor, vet this vendor, vendor research, entity check, vendor check.
-  Requires sam-gov-api, usaspending-api, and ecfr-api skills installed.
+  Requires sam-gov-api and usaspending-api skills installed.
 ---
 
 # Vendor Intelligence Skill
 
 ## Overview
 
-This skill orchestrates three API skills to produce pre-award vendor intelligence reports. It contains no API code of its own. It tells Claude what to pull from SAM.gov, USASpending, and eCFR, in what order, and how to synthesize findings into a structured due diligence report with responsibility factor evidence and risk flags.
+This skill orchestrates two API skills to produce pre-award vendor intelligence reports. It contains no API code of its own. It tells Claude what to pull from SAM.gov and USASpending, in what order, and how to synthesize findings into a structured due diligence report with responsibility factor evidence and risk flags.
 
 **Required skills (must be installed):**
 1. **SAM.gov API**: entity registration, exclusions, contract awards
 2. **USASpending API**: federal award spending data
-3. **eCFR API**: FAR/DFARS clause text
 
-**Required API keys:** SAM.gov API key (same key used by SAM.gov skill). USASpending and eCFR require no keys.
+**Required API keys:** SAM.gov API key (same key used by SAM.gov skill). USASpending requires no key.
 
 **What this skill produces:** A structured vendor intelligence report covering entity profile, exclusion status, contract award history, FAR 9.104-1 responsibility factor mapping, and risk flags. The report is for pre-award file documentation and CO decision support.
 
@@ -44,7 +43,6 @@ Ask for all inputs in a single pass.
 |-------|---------|-------|
 | Solicitation NAICS | None | If provided, enables NAICS_MISMATCH risk flag |
 | Lookback years | 5 | Fiscal years of award history to pull |
-| Include FAR text | No | Whether to include full FAR 9.104-1 text in output |
 
 ### Input Resolution
 
@@ -182,13 +180,7 @@ Synthesize into:
 
 ### Step 4: FAR 9.104-1 Responsibility Factor Mapping
 
-For each of the seven general standards in FAR 9.104-1, map what evidence we found. If `include_far_text` is True, fetch the text:
-
-```python
-# eCFR skill uses get_content() + extract_section_text(), NOT ecfr_content()
-xml = get_content(title_number=48, section="9.104-1")
-text = extract_section_text(xml)
-```
+For each of the seven general standards in FAR 9.104-1, map what evidence we found. See the `vendor-intelligence-reference` skill for the full text of each standard.
 
 Present as a table:
 
@@ -282,8 +274,3 @@ See the `vendor-intelligence-reference` skill for detailed flag definitions, thr
 ## Rate Limit Awareness
 
 This workflow makes 5-10 SAM.gov API calls per vendor (entity, exclusions, awards, address check, CAGE check). The SAM.gov daily budget is shared across all SAM.gov skill usage. A single vendor intel run uses roughly the same budget as 5-10 individual SAM.gov lookups. Plan accordingly if running multiple vendors in sequence.
-
-
----
-
-*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*
