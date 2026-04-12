@@ -43,6 +43,8 @@ Website: [1102tools.com](https://1102tools.com)
 | [Grants Builder](skills/grants-builder) | No key* | Federal grant budgets aligned to 2 CFR 200 / SF-424A. |
 | [Vendor Intelligence](skills/vendor-intelligence) | No key* | Pre-award vendor due diligence: entity profiles, exclusion checks, award history, FAR 9.104-1 mapping, 11 risk flags. |
 | [Vendor Intelligence Reference](skills/vendor-intelligence-reference) | No key | FAR 9 responsibility guide, risk flag definitions, business type codes. Install alongside main skill. |
+| [Award Review](skills/award-review) | No key* | Post-award contract review: 12 factual observations covering entity registration, competition, subawards, and contract structure. |
+| [Award Review Reference](skills/award-review-reference) | No key | Observation definitions, thresholds, code tables, FFRDC/M&O exclusion list. Install alongside main skill. |
 
 *Uses keys from other installed skills. No additional key needed.
 
