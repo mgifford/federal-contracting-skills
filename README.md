@@ -4,7 +4,7 @@ Claude Skills for federal contracting professionals. No subscriptions, no paywal
 
 Website: [1102tools.com](https://1102tools.com)
 
-![Architecture diagram showing how the 1102tools Claude Skills connect. SOW/PWS Builder feeds three IGCE Builders (FFP, LH/T&M, Cost-Reimbursement) which pull from BLS OEWS, GSA CALC+, and GSA Per Diem APIs. Also in the collection: Market Research Builder uses USASpending, Grants Builder uses BLS OEWS and Per Diem, Vendor Intelligence uses SAM.gov, USASpending, and eCFR, and Regulatory Intelligence uses Federal Register, eCFR, and Regulations.gov.](docs/architecture.png)
+![Architecture diagram showing how the 1102tools Claude Skills connect. SOW/PWS Builder feeds three IGCE Builders (FFP, LH/T&M, Cost-Reimbursement) which pull from BLS OEWS, GSA CALC+, and GSA Per Diem APIs. Also in the collection: Market Research Builder uses USASpending, Grants Builder uses BLS OEWS and Per Diem, Vendor Intelligence uses SAM.gov, USASpending, and eCFR, and Award Review uses SAM.gov and USASpending.](docs/architecture.png)
 
 > **Before you build:** Not every acquisition capability should be an AI tool. Dozens of potential skills were evaluated and several were intentionally excluded. Some are planned and coming. Others will never be built because they cross the line from data assembly into professional judgment -- the kind of output that would not survive a protest, would not be adopted by the workforce, and would not be worth the time to develop. Read **[AI-BOUNDARIES.md](AI-BOUNDARIES.md)** for the full reasoning. It will save you development time and your users the backlash.
 
