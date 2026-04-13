@@ -33,25 +33,25 @@ Website: [1102tools.com](https://1102tools.com)
 
 ### Orchestration Skills
 
-| Skill | Key | Description |
-|-------|-----|-------------|
-| [SOW/PWS Builder](skills/sow-pws-builder) | No key | Structured scope decision tree producing contract-file-ready SOW or PWS. FAR 37.102(d) compliant: staffing handoff for the IGCE Builder is delivered as chat output, never embedded in the document body. |
-| [IGCE Builder: FFP](skills/igce-builder-ffp) | No key* | Firm-fixed-price IGCEs with layered wrap rate model (fringe, overhead, G&A, profit). |
-| [IGCE Builder: LH/T&M](skills/igce-builder-lh-tm) | No key* | Labor Hour and T&M IGCEs with burden multiplier pricing. |
-| [IGCE Builder: Cost-Reimbursement](skills/igce-builder-cr) | No key* | CPFF, CPAF, CPIF IGCEs with fee structure analysis and statutory fee caps. |
-| [Market Research Builder](skills/market-research-builder) | No key* | FAR Part 10 market research report from USASpending data. |
-| [Grants Builder](skills/grants-builder) | No key* | Federal grant budgets aligned to 2 CFR 200 / SF-424A. |
-| [Vendor Intelligence](skills/vendor-intelligence) | No key* | Pre-award vendor due diligence: entity profiles, exclusion checks, award history, FAR 9.104-1 mapping, 11 risk flags. |
-| [Vendor Intelligence Reference](skills/vendor-intelligence-reference) | No key | FAR 9 responsibility guide, risk flag definitions, business type codes. Install alongside main skill. |
-| [Award Review](skills/award-review) | No key* | Post-award contract review: 12 factual observations covering entity registration, competition, subawards, and contract structure. |
-| [Award Review Reference](skills/award-review-reference) | No key | Observation definitions, thresholds, code tables, FFRDC/M&O exclusion list. Install alongside main skill. |
+| Skill | Key | Requires | Description |
+|-------|-----|----------|-------------|
+| [SOW/PWS Builder](skills/sow-pws-builder) | No key | -- | Structured scope decision tree producing contract-file-ready SOW or PWS. FAR 37.102(d) compliant: staffing handoff for the IGCE Builder is delivered as chat output, never embedded in the document body. |
+| [IGCE Builder: FFP](skills/igce-builder-ffp) | No key* | BLS OEWS, GSA CALC+, GSA Per Diem | Firm-fixed-price IGCEs with layered wrap rate model (fringe, overhead, G&A, profit). |
+| [IGCE Builder: LH/T&M](skills/igce-builder-lh-tm) | No key* | BLS OEWS, GSA CALC+, GSA Per Diem | Labor Hour and T&M IGCEs with burden multiplier pricing. |
+| [IGCE Builder: Cost-Reimbursement](skills/igce-builder-cr) | No key* | BLS OEWS, GSA CALC+, GSA Per Diem | CPFF, CPAF, CPIF IGCEs with fee structure analysis and statutory fee caps. |
+| [Market Research Builder](skills/market-research-builder) | No key* | USASpending API | FAR Part 10 market research report from USASpending data. |
+| [Grants Builder](skills/grants-builder) | No key* | BLS OEWS, GSA Per Diem | Federal grant budgets aligned to 2 CFR 200 / SF-424A. |
+| [Vendor Intelligence](skills/vendor-intelligence) | No key* | SAM.gov API, USASpending API | Pre-award vendor due diligence: entity profiles, exclusion checks, award history, FAR 9.104-1 mapping, 11 risk flags. |
+| [Vendor Intelligence Reference](skills/vendor-intelligence-reference) | No key | -- | FAR 9 responsibility guide, risk flag definitions, business type codes. Install alongside main skill. |
+| [Award Review](skills/award-review) | No key* | SAM.gov API, USASpending API | Post-award contract review: 12 factual observations covering entity registration, competition, subawards, and contract structure. |
+| [Award Review Reference](skills/award-review-reference) | No key | -- | Observation definitions, thresholds, code tables, FFRDC/M&O exclusion list. Install alongside main skill. |
 
 ### Other Transaction (OT) Skills
 
-| Skill | Key | Description |
-|-------|-----|-------------|
-| [OT Project Description Builder](skills/ot-project-description-builder) | No key | Milestone-based project descriptions for prototype OT agreements under 10 USC 4021/4022. Replaces the SOW/PWS for OTs: structures work around TRL progression phases and go/no-go gates instead of task/subtask CLINs. Handles NDC, small business, traditional (with cost sharing), and consortium-brokered agreements. Produces a .docx agreement attachment and a chat-only milestone handoff table for the OT Cost Analysis. |
-| [OT Cost Analysis](skills/ot-cost-analysis) | No key* | Should-cost estimates and price reasonableness analyses for OT agreements. Milestone-based pricing citing 10 USC 4021 instead of FAR 15.404. Handles cost-sharing math (10 USC 4022(d)), consortium management fees, fixed-price and cost-type milestone payments, and pre-solicitation budget planning. Produces a formula-driven .xlsx workbook with scenario analysis and a price reasonableness memo for the agreement file. |
+| Skill | Key | Requires | Description |
+|-------|-----|----------|-------------|
+| [OT Project Description Builder](skills/ot-project-description-builder) | No key | -- | Milestone-based project descriptions for prototype OT agreements under 10 USC 4021/4022. Replaces the SOW/PWS for OTs: structures work around TRL progression phases and go/no-go gates instead of task/subtask CLINs. Handles NDC, small business, traditional (with cost sharing), and consortium-brokered agreements. Produces a .docx agreement attachment and a chat-only milestone handoff table for the OT Cost Analysis. |
+| [OT Cost Analysis](skills/ot-cost-analysis) | No key* | BLS OEWS, GSA CALC+, GSA Per Diem | Should-cost estimates and price reasonableness analyses for OT agreements. Milestone-based pricing citing 10 USC 4021 instead of FAR 15.404. Handles cost-sharing math (10 USC 4022(d)), consortium management fees, fixed-price and cost-type milestone payments, and pre-solicitation budget planning. Produces a formula-driven .xlsx workbook with scenario analysis and a price reasonableness memo for the agreement file. |
 
 *Uses keys from other installed skills. No additional key needed.
 
