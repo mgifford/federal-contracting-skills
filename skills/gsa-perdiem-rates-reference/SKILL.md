@@ -181,9 +181,9 @@ def lookup_by_zip(zip_code, year=2026, api_key="DEMO_KEY"):
 
 ---
 
-## 3. Common Per Diem Rates (FY2026)
+## 3. Common Per Diem Rates (reference snapshot)
 
-Verified against live API March 2026. **Goes stale each August; query API for exact figures after August.**
+These are reference values for quick comparison. **Rates change each fiscal year** (GSA publishes new rates effective October 1). Query the live API for exact current figures before citing in a contract file or IGCE.
 
 | Location | NSA City Name | Lodging Range | M&IE | Max Daily |
 |----------|--------------|--------------|------|-----------|
@@ -245,3 +245,8 @@ Per diem covers lodging + M&IE only. Also estimate: airfare (GSA City Pairs at c
 | Best for | IGCE automation, Claude skills | One-off lookups |
 
 Cross-validate at https://www.gsa.gov/travel/plan-book/per-diem-rates.
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

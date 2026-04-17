@@ -4,12 +4,7 @@ description: >
   Query the Regulations.gov REST API for federal rulemaking data including proposed rules, final rules, notices, public comments, and dockets. Trigger for any mention of Regulations.gov, FAR cases, DFARS cases, proposed rules, NPRMs, ANPRMs, comment periods, rulemaking, dockets, Federal Register notices, or regulatory tracking. Also trigger when the user needs to monitor regulatory changes from FAR Council, DARS, SBA, OFPP, or any agency supplement. This skill is essential for tracking active and upcoming regulatory changes that affect federal procurement policy, contract clauses, and acquisition procedures.
 ---
 
-# Regulations.gov API Skill v1.3
-
-## Changelog
-- v1.3: Refactored for efficiency; moved composite workflows, response schemas, pagination, document ID patterns, and troubleshooting to REFERENCE.md
-- v1.2: Sort/filter support per endpoint, docketId filter on comments, case-sensitivity warning, rate limit header casing
-- v1.0: Initial release
+# Regulations.gov API Skill
 
 ## Overview
 
@@ -242,3 +237,8 @@ Returns: `title`, `docketType`, `agencyId`, `rin` (links to Unified Agenda), `dk
 ## Additional Resources
 
 For composite workflows (open comment tracker, FAR case history, comment analysis, regulatory change monitor, multi-agency docket search), response schemas, cursor-based pagination, document ID format guide, FAR case docket IDs, and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

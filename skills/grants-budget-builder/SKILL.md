@@ -1,5 +1,5 @@
 ---
-name: grants-builder
+name: grants-budget-builder
 description: >
   Build federal grant budget estimates aligned to 2 CFR 200 (Uniform
   Guidance) and SF-424A format by orchestrating BLS OEWS and GSA Per
@@ -11,20 +11,15 @@ description: >
   justification, grant cost estimate, 2 CFR 200 budget, cooperative
   agreement budget, R01 budget, NIH budget, grant personnel costs,
   fringe benefits, indirect cost rate, NICRA, F&A rate, MTDC, grant
-  travel estimate, budget narrative, budget justification narrative,
-  subaward budget, or modular budget. Also trigger for grant-related
-  pricing, effort-based costing, or institutional rate lookups. Does
-  NOT cover contract IGCEs (use IGCE Builder Core for FAR-based
-  estimates). Requires BLS OEWS API and GSA Per Diem Rates API skills.
+  travel estimate, budget narrative, subaward budget, or modular
+  budget. Also trigger for grant-related pricing or effort-based
+  costing. Does NOT cover contract IGCEs (use IGCE Builder FFP,
+  LH/T&M, or CR). Does NOT cover NOFO program descriptions (use
+  grants-program-description-builder). Requires BLS OEWS API and
+  GSA Per Diem Rates API skills.
 ---
 
-# Grants Builder
-
-**Version 1.0** | March 2026
-
-| Version | Date | Change |
-|---------|------|--------|
-| 1.0 | Mar 2026 | Initial release: SF-424A budget generation with BLS personnel benchmarking, Per Diem travel, NICRA indirect costs, multi-year escalation, and budget justification narrative. |
+# Grants Budget Builder
 
 ## Overview
 
@@ -544,3 +539,8 @@ Claude will: use 10% de minimis rate per 2 CFR 200.414(f). Note the de minimis e
 
 **NIH with salary cap:** "PI salary is $280,000 but this is NIH-funded"
 Claude will: verify current NIH salary cap via web search, apply the cap to the PI's effort-based salary calculation, note the difference in the personnel detail sheet, and explain the cap in the budget justification narrative.
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

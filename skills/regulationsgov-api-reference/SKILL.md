@@ -282,3 +282,8 @@ Find all FAR cases: `filter[agencyId]=FAR&filter[docketType]=Rulemaking` on dock
 | 400 invalid sort on comments | Wrong sort field | Comments only: `postedDate`, `lastModifiedDate`, `documentId` |
 | 400 invalid filter on dockets | Unsupported filter | Dockets only: `searchTerm`, `agencyId`, `docketType`, `lastModifiedDate` |
 | `docketId` filter on comments returns nothing | Possible; try `commentOnId` | `docketId` works on comments but covers all docs in docket |
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

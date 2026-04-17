@@ -4,11 +4,7 @@ description: >
   Query SAM.gov REST APIs for entity registration, exclusion/debarment records, contract opportunities, and contract awards (FPDS replacement). Entity Management v3: UEI/CAGE lookups, registration status, business types, NAICS/PSC, reps and certs. Exclusions v4: debarment/suspension checks. Opportunities v2: solicitations, sources sought, award notices. Contract Awards v1: award search, PIID lookup, modification history, vendor awards. Trigger on: SAM.gov, UEI, CAGE code, entity registration, debarment, suspension, excluded parties, exclusion check, responsibility determination, contract opportunities, solicitations, sources sought, contract awards, FPDS, PIID lookup, award search, award history, modification history, vendor award profile, vendor due diligence, entity validation, pre-award checks.
 ---
 
-# SAM.gov API Skill (v1.1)
-
-## Changelog
-- v1.1: Added Contract Awards API (v1), the FPDS.gov replacement. New `sam_awards()` helper, rules 24-30, endpoint map, quick reference examples, and composite workflows. Updated USASpending relationship guidance.
-- v1.0: Initial release covering Entity Management (v3), Exclusions (v4), Get Opportunities (v2), PSC lookup
+# SAM.gov API Skill
 
 ## Overview
 
@@ -517,3 +513,8 @@ sam_psc("engineering")
 ## Additional Resources
 
 For entity section schemas (full field reference), exclusion response fields, contract awards response schema, opportunity set-aside codes, business type codes, composite workflows (vendor responsibility check, market research entity scan, opportunity monitoring, contract award history lookup, vendor award profile), and troubleshooting: `view` the **REFERENCE.md** file in this skill directory.
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

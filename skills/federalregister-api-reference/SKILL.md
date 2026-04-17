@@ -264,3 +264,8 @@ Note: `docket_ids` array format is inconsistent. Sometimes separate elements, so
 | `docket_ids` parsing fails | Inconsistent format | Split on commas defensively |
 | CORRECT type returns old data | Legacy pre-2009 only | Use `conditions[correction]=1` for modern |
 | Term search returns 0 | Stop words filtered | Use substantive keywords |
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

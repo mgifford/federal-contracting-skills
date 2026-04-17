@@ -292,3 +292,8 @@ The `recipient` category returns results by unique entity (UEI). Large companies
 | Truncated description | FPDS 4000-char limit | Normal; use what's available |
 | Stale data (non-DoD) | FPDS update lag | Non-DoD typically available within 5 business days |
 | Stale data (DoD/USACE) | 90-day FPDS reporting delay | DoD and USACE procurement data has a 90-day lag; plan accordingly |
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

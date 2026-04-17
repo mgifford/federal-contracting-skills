@@ -17,21 +17,12 @@ description: >
 
 # Market Research Builder Skill
 
-**Version 1.3** | March 2026
-
-| Version | Date | Change |
-|---------|------|--------|
-| 1.0 | Mar 2026 | Initial release: full FAR Part 10 report orchestration with dual-scope strategy, 10-section DOCX output |
-| 1.1 | Mar 2026 | Fixed award distribution stats to note sample bias. Added partial-FY labeling for lookback start. Added vendor entity dedup warning. Added VSA to SB breakdown. Clarified prior award table column guidance and cover page layout. |
-| 1.2 | Mar 2026 | Fixed fiscal_year string type coercion in Step 8 (caused broken partial-FY labels, wrong YoY, wrong market characterization). Switched prior award table to landscape orientation. Added vendor dedup detection logic. Strengthened market characterization logic to exclude both partial FYs. Added TOC update-fields note. Fixed market concentration denominator description. |
-| 1.3 | Mar 2026 | Removed empty Notes column from vendor, SB, competition, and contract type tables (kept in trend table only). Renamed "SB Total Set-Aside" to "Small Business (SBA/SBP)" for clarity. Added column character limits for prior award landscape table. Added footer re-definition guidance for section breaks. Added SB vendor identification technique for Rule of Two. Scoped Appendix A to base filter objects. Added rebrand/acquisition limitation to vendor dedup. |
-
 ## Overview
 
 This skill orchestrates the USASpending API skill to produce FAR Part 10 market research reports as DOCX files suitable for the contract file. It contains no API code of its own. It tells Claude what to pull from USASpending, in what order, and how to synthesize the data into a structured market research report with findings and recommendations.
 
 **Required skill (must be installed):**
-1. **USASpending API (v1.5+)**: federal award data by NAICS, PSC, agency, vendor, and keyword
+1. **USASpending API**: federal award data by NAICS, PSC, agency, vendor, and keyword
 
 **Required API keys:** None. USASpending is free, no-auth.
 
@@ -480,8 +471,10 @@ Generate a formal DOCX with these sections:
 - **Column character limits for landscape (12,960 DXA content width):** PIID: 20 chars (~2,000 DXA), Vendor: 35 chars (~3,200 DXA), Amount: ~1,800 DXA, Start Date: ~1,500 DXA, End Date: ~1,500 DXA, Awarding Agency: 35 chars (~2,960 DXA). Truncate vendor names and agency names that exceed limits. Do not truncate PIIDs.
 - **Footer re-definition across section breaks:** docx-js section breaks reset headers and footers. Re-define the footer paragraph (with page numbers) in every section: the portrait opening section, the landscape Section 4 section, and the portrait Section 5+ section. Without this, page numbers disappear after the first section break.
 - Exclude $0 awards from the table
+- If awards in the table have start dates before the lookback period, add a note: "Awards with start dates before FY[start] appear because they had contract modification activity (obligations, deobligations, or administrative changes) during the lookback period. Base award dates reflect the original contract, not the modification date."
 - Award value distribution summary (max, median, mean only; omit min) based on positive-value awards, with explicit label: "Top Awards Sample" and a note that these are not population statistics
 - If agency-scoped results are thin (<20 awards), note this and include the total government-wide count for context
+- If agency-scoped results return zero, label the section "(Government-Wide)" AND explain the fallback: "NAVWAR returned zero awards under NAICS 541512 / PSC D399. Government-wide data is presented for market context." Do not silently label it government-wide without explaining why.
 
 **5. Vendor Landscape ([Agency] or Government-Wide)**
 - Table of top N vendors: rank, vendor name, total obligations, market share %
@@ -597,3 +590,8 @@ Note in the methodology section:
 - **Subcontract data**: limited in USASpending; prime award analysis only.
 - **Price analysis**: this skill produces market research, not pricing analysis. For pricing, use the IGCE Builder skill.
 - **Award count trends over time**: the spending_over_time endpoint returns dollars only, not counts per year.
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*

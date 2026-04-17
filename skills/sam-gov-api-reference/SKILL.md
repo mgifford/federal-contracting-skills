@@ -799,3 +799,8 @@ Common PSC codes for professional services acquisitions:
 | Contract Awards deleted records missing | Deleted records excluded by default | Pass `deletedStatus=Y` to include deleted records; there is no separate endpoint |
 | Contract Awards `totalRecords` type varies | Integer when populated, string when empty (in `awardResponse` wrapper) | Always convert to int: `int(d.get("totalRecords", 0))` |
 | FPDS.gov is gone | FPDS ezSearch decommissioned Feb 24, 2026; ATOM feed retires July 31, 2026 | Use the SAM.gov Contract Awards API at `/contract-awards/v1/search` as the replacement |
+
+
+---
+
+*MIT © James Jenrette / 1102tools. Source: github.com/1102tools/federal-contracting-skills*
